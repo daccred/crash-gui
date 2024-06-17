@@ -1,6 +1,6 @@
-# scratch-gui
+# scalez-gui
 
-Scratch GUI is a set of React components that comprise the interface for creating and running Scratch 3.0 projects
+Scale GUI is a set of React components that comprise the interface for creating and running Scale 3.0 projects
 
 To open the current build in your browser on Github Pages:
 
