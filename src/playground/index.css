@@ -1,3 +1,7 @@
+html {
+    filter: invert(0) hue-rotate(180deg);
+}
+
 html,
 body,
 .app {
