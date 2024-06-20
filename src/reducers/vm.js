@@ -1,4 +1,4 @@
-import VM from 'scratch-vm';
+import VM from 'scalez-runtime';
 import storage from '../lib/storage';
 
 const SET_VM = 'scratch-gui/vm/SET_VM';

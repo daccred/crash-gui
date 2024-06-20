@@ -14,7 +14,7 @@ import SliderPrompt from './slider-prompt.jsx';
 
 import {connect} from 'react-redux';
 import {Map} from 'immutable';
-import VM from 'scratch-vm';
+import VM from 'scalez-runtime';
 
 const availableModes = opcode => (
     monitorModes.filter(t => {
