@@ -616,7 +616,7 @@ class MenuBar extends React.Component {
                             </div>
                         )}
                     </div>
-                    {this.props.canEditTitle ? (
+                    {/* {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
                             <MenuBarItemTooltip
                                 enable
@@ -635,10 +635,10 @@ class MenuBar extends React.Component {
                             userId={this.props.authorId}
                             username={this.props.authorUsername}
                         />
-                    ) : null)}
+                    ) : null)} */}
                     <div className={classNames(styles.menuBarItem)}>
-                        {true ? (
-                        // {this.props.canShare ? (
+                        {/* {true ? ( */}
+                        {this.props.canShare ? (
                             (this.props.isShowingProject || this.props.isUpdating) && (
                                 <ProjectWatcher onDoneUpdating={this.props.onSeeCommunity}>
                                     {
