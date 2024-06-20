@@ -22,6 +22,7 @@ document.body.appendChild(appTarget);
 if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level
+    // require('./blocks-only.jsx').default();
     require('./render-gui.jsx').default(appTarget);
 
 } else {

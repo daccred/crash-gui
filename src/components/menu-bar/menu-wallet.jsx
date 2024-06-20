@@ -29,41 +29,41 @@ function WalletConnector() {
   return (
     <>
       {connection ? (
-     
-     <Button
-     className={classNames(
-         styles.menuBarItem,
-         styles.hoverable,
-         styles.mystuffButton
-     )}
-     iconClassName={styles.communityButtonIcon}
-     onClick={onDisconnect}
- >
-     <FormattedMessage
-         defaultMessage="Disconnect Wallet"
-         description="Label to disconnect stark wallet"
-         id="gui.menuBar.disconnectWallet"
-     />
- </Button>
+
+        <Button
+          className={classNames(
+            styles.menuBarItem,
+            styles.hoverable,
+            styles.mystuffButton
+          )}
+          iconClassName={styles.communityButtonIcon}
+          onClick={onDisconnect}
+        >
+          <FormattedMessage
+            defaultMessage="Disconnect Wallet"
+            description="Label to disconnect stark wallet"
+            id="gui.menuBar.disconnectWallet"
+          />
+        </Button>
       ) : (
 
-         
-     <Button
-     className={classNames(
-         styles.menuBarItem,
-         styles.hoverable,
-         styles.mystuffButton
-     )}
-     iconClassName={styles.communityButtonIcon}
-     onClick={onConnect}
 
- >
-     <FormattedMessage
-         defaultMessage="Connect Wallet"
-         description="Label for stark compatible wallet"
-         id="gui.menuBar.connectWallet"
-     />
- </Button>
+        <Button
+          className={classNames(
+            styles.menuBarItem,
+            styles.hoverable,
+            styles.mystuffButton
+          )}
+          iconClassName={styles.communityButtonIcon}
+          onClick={onConnect}
+
+        >
+          <FormattedMessage
+            defaultMessage="Connect Wallet"
+            description="Label for stark compatible wallet"
+            id="gui.menuBar.connectWallet"
+          />
+        </Button>
       )}
     </>
 

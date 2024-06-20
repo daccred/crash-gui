@@ -12,7 +12,7 @@ const getCategoryIconURI = extensionIcons => {
     return extensionIcons.menuIconURI || extensionIcons.blockIconURI;
 };
 
-// scratch-blocks colours has a pen property that scratch-gui uses for all extensions
+// scalez-blocks colours has a pen property that scratch-gui uses for all extensions
 const getExtensionColors = theme => getColorsForTheme(theme).pen;
 
 /**
