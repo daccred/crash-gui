@@ -19,7 +19,7 @@
     "dist": "BUILD_MODE=dist npm run build",
     "clean": "rimraf ./build ./dist",
     "deploy": "touch build/.nojekyll && gh-pages -t -d build -m \"[skip ci] Build for $(git log --pretty=format:%H -n1)\"",
-    "prepublish": "npm run dist && node scripts/prepublish.mjs",
+    "prepublish": "node scripts/prepublish.mjs && npm run dist",
     "prune": "./prune-gh-pages.sh",
     "i18n:push": "tx-push-src scratch-editor interface translations/en.json",
     "i18n:src": "rimraf ./translations/messages/src && babel src > tmp.js && rimraf tmp.js && build-i18n-src ./translations/messages/src ./translations/",
