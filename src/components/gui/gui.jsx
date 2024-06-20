@@ -37,6 +37,7 @@ import {themeMap} from '../../lib/themes';
 
 import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
+import cairoIcon from './icon--cairo.svg';
 import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
@@ -305,13 +306,18 @@ const GUIComponent = props => {
                                     </Tab> */}
                                     <Tab
                                         className={tabClassNames.tab}
+                                        // onClick={console.log('check the generated code')}
                                         onClick={onActivateSoundsTab}
                                     >
                                         <img
                                             draggable={false}
-                                            src={soundsIcon}
+                                            src={cairoIcon}
                                         />
-                                        <p style={{ fontSize:'12px' }}>Cairo</p>
+                                          <FormattedMessage
+                                            defaultMessage="Cairo"
+                                            description="Button to get to the cairo panel"
+                                            id="gui.gui.cairoTab"
+                                        />
                                     </Tab>
                                 </TabList>
                                 <TabPanel className={tabClassNames.tabPanel}>
@@ -329,11 +335,26 @@ const GUIComponent = props => {
                                             vm={vm}
                                         />
                                     </Box>
-                                    <Box className={styles.extensionButtonContainer}>
+                                        <Box style={{
+                                            width: '62px',
+                                            height: '3.25rem',
+                                            backgroundColor: '#F7F7F7',
+                                            border: '1px solid #DDDDDD',
+                                            position: "absolute",
+                                            bottom: 0,
+                                            left: 0,
+                                            right: 0,
+                                            zIndex: '999',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center'
+                                        }} 
+                                        />
+                                    {/* <Box className={styles.extensionButtonContainer}>
                                         <button
                                             className={styles.extensionButton}
                                             title={intl.formatMessage(messages.addExtension)}
-                                            onClick={onExtensionButtonClick}
+                                            // onClick={onExtensionButtonClick}
                                         >
                                             <img
                                                 className={styles.extensionButtonIcon}
@@ -341,7 +362,7 @@ const GUIComponent = props => {
                                                 src={addExtensionIcon}
                                             />
                                         </button>
-                                    </Box>
+                                    </Box> */}
                                     <Box className={styles.watermark}>
                                         <Watermark />
                                     </Box>
@@ -350,7 +371,8 @@ const GUIComponent = props => {
                                     {costumesTabVisible ? <CostumeTab vm={vm} /> : null}
                                 </TabPanel>
                                 <TabPanel className={tabClassNames.tabPanel}>
-                                    {soundsTabVisible ? <SoundTab vm={vm} /> : null}
+                                    {null}
+                                    {/* {soundsTabVisible ? <SoundTab vm={vm} /> : null} */}
                                 </TabPanel>
                             </Tabs>
                             {backpackVisible ? (

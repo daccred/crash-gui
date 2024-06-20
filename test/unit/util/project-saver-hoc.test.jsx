@@ -18,7 +18,7 @@ describe('projectSaverHOC', () => {
             scratchGui: {
                 projectChanged: false,
                 projectState: {},
-                projectTitle: 'Scratch Project',
+                projectTitle: 'Blockchain 101',
                 timeout: {
                     autoSaveTimeoutId: null
                 }

@@ -794,10 +794,10 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         soundXML, gap,
         eventsXML, gap,
         controlXML, gap,
-        sensingXML, gap,
+        // sensingXML, gap,
         operatorsXML, gap,
-        variablesXML, gap,
-        myBlocksXML
+        // variablesXML, gap,
+        // myBlocksXML
     ];
 
     for (const extensionCategory of categoriesXML) {
