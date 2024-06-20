@@ -1,0 +1,60 @@
+[
+    {
+        "name": "MessageImpl",
+        "type": "impl",
+        "interface_name": "mu_hack::message::IMessage"
+    },
+    {
+        "name": "core::byte_array::ByteArray",
+        "type": "struct",
+        "members": [
+            {
+                "name": "data",
+                "type": "core::array::Array::<core::bytes_31::bytes31>"
+            },
+            {
+                "name": "pending_word",
+                "type": "core::felt252"
+            },
+            {
+                "name": "pending_word_len",
+                "type": "core::integer::u32"
+            }
+        ]
+    },
+    {
+        "name": "mu_hack::message::IMessage",
+        "type": "interface",
+        "items": [
+            {
+                "name": "send_message",
+                "type": "function",
+                "inputs": [
+                    {
+                        "name": "message",
+                        "type": "core::byte_array::ByteArray"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "name": "get_message",
+                "type": "function",
+                "inputs": [],
+                "outputs": [
+                    {
+                        "type": "core::byte_array::ByteArray"
+                    }
+                ],
+                "state_mutability": "view"
+            }
+        ]
+    },
+    {
+        "kind": "enum",
+        "name": "mu_hack::message::Message::Event",
+        "type": "event",
+        "variants": []
+    }
+]

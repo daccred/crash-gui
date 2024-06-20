@@ -12,6 +12,7 @@ import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx
 import supportedBrowser from '../lib/supported-browser';
 
 import styles from './index.css';
+import { ConnectProvider } from '../lib/web3/context/ConnectContext.jsx';
 
 const appTarget = document.createElement('div');
 appTarget.className = styles.app;
@@ -28,5 +29,11 @@ if (supportedBrowser()) {
     const WrappedBrowserModalComponent = AppStateHOC(BrowserModalComponent, true /* localesOnly */);
     const handleBack = () => {};
     // eslint-disable-next-line react/jsx-no-bind
-    ReactDOM.render(<WrappedBrowserModalComponent onBack={handleBack} />, appTarget);
+    ReactDOM.render(
+        <ConnectProvider>
+
+    <WrappedBrowserModalComponent onBack={handleBack} />
+        </ConnectProvider>
+    , 
+    appTarget);
 }

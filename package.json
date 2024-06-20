@@ -1,7 +1,7 @@
 {
   "name": "scalez-gui",
   "version": "4.0.534",
-  "description": "Graphical User Interface for creating and running Scratch 3.0 projects",
+  "description": "Graphical User Interface for creating and running Scale 3.0 projects",
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/scratchfoundation/scratch-gui#readme",

@@ -6,6 +6,7 @@ import AppStateHOC from '../lib/app-state-hoc.jsx';
 import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import log from '../lib/log.js';
+import { ConnectProvider } from '../lib/web3/context/ConnectContext.jsx';
 
 const onClickLogo = () => {
     window.location = 'https://starkware.com';
@@ -62,8 +63,10 @@ export default appTarget => {
     }
 
     ReactDOM.render(
+        
         // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
         simulateScratchDesktop ?
+        <ConnectProvider>
             <WrappedGui
                 canEditTitle
                 isScratchDesktop
@@ -72,7 +75,11 @@ export default appTarget => {
                 onTelemetryModalCancel={handleTelemetryModalCancel}
                 onTelemetryModalOptIn={handleTelemetryModalOptIn}
                 onTelemetryModalOptOut={handleTelemetryModalOptOut}
-            /> :
+                />
+                </ConnectProvider>
+                :
+        <ConnectProvider>
+
             <WrappedGui
                 canEditTitle
                 backpackVisible
@@ -80,6 +87,8 @@ export default appTarget => {
                 backpackHost={backpackHost}
                 canSave={false}
                 onClickLogo={onClickLogo}
-            />,
+            />
+            </ConnectProvider>
+            ,
         appTarget);
 };
