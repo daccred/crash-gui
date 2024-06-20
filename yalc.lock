@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "scalez-runtime": {
+      "signature": "e0b022aec18875fb41a5d1afbdd121bc",
+      "file": true
+    }
+  }
+}
