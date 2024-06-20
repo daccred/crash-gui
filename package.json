@@ -1,6 +1,6 @@
 {
   "name": "scalez-gui",
-  "version": "4.0.52",
+  "version": "4.0.534",
   "description": "Graphical User Interface for creating and running Scratch 3.0 projects",
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
@@ -9,16 +9,17 @@
     "type": "git",
     "url": "https://github.com/scratchfoundation/scratch-gui.git"
   },
-  "main": "./build/gui.js",
+  "main": "./dist/scratch-gui.js",
   "files": [
-    "build/",
-    "browser/"
+    "dist/",
+    "src/"
   ],
   "scripts": {
     "build": "npm run clean && webpack",
+    "dist": "BUILD_MODE=dist npm run build",
     "clean": "rimraf ./build ./dist",
     "deploy": "touch build/.nojekyll && gh-pages -t -d build -m \"[skip ci] Build for $(git log --pretty=format:%H -n1)\"",
-    "prepublish": "node scripts/prepublish.mjs",
+    "prepublish": "npm run dist && node scripts/prepublish.mjs",
     "prune": "./prune-gh-pages.sh",
     "i18n:push": "tx-push-src scratch-editor interface translations/en.json",
     "i18n:src": "rimraf ./translations/messages/src && babel src > tmp.js && rimraf tmp.js && build-i18n-src ./translations/messages/src ./translations/",
@@ -80,13 +81,13 @@
     "react-modal": "^3.9.1",
     "react-popover": "^0.5.10",
     "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-throttle": "^0.1.1",
     "react-responsive": "^5.0.0",
     "react-style-proptype": "^3.2.2",
     "react-tabs": "^2.3.0",
     "react-tooltip": "^4.5.1",
     "react-virtualized": "^9.20.1",
-    "redux": "^3.7.2",
-    "redux-throttle": "^0.1.1",
     "scratch-audio": "^1.0.0",
     "scratch-blocks": "^1.1.6",
     "scratch-l10n": "^3.18.3",
