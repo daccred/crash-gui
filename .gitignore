@@ -1,6 +1,7 @@
 # Mac OS
 .DS_Store
 .yalc
+yalc.lock
 
 # NPM
 /node_modules

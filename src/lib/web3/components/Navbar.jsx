@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import NavigationLinks from "./NavigationLinks";
-import WalletConnector from "./WalletConnector";
 
 function Navbar() {
   return (
@@ -11,7 +10,6 @@ function Navbar() {
         }
       >
         <NavigationLinks />
-        <WalletConnector />
       </nav>
     </div>
   );

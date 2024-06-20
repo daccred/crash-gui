@@ -23,7 +23,7 @@ export const connectWallet = async (dispatch, connect) => {
   export const disconnectWallet = async (dispatch, disconnect) => {
     try {
       dispatch({ type: "loading" });
-      await disconnect();
+      await disconnect({ clearLastWallet: true });
       dispatch({
         type: "disconnectWallet",
       });

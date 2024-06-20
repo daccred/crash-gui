@@ -282,7 +282,7 @@ class CodeTab extends React.Component {
       
 
 `}
-                    language={'cairo'}
+                    language={'rust'}
                     theme={atomOneDark}
                     showLineNumbers={true}
                     wrapLongLines={true}

@@ -95,7 +95,7 @@
     "redux": "^3.7.2",
     "redux-throttle": "^0.1.1",
     "scalez-blocks": "^1.1.154",
-    "scalez-runtime": "file:.yalc/scalez-runtime",
+    "scalez-runtime": "^4.5.3",
     "scratch-audio": "^1.0.0",
     "scratch-blocks": "^1.1.6",
     "scratch-l10n": "^3.18.3",
