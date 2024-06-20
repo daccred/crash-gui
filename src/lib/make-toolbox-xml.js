@@ -1,4 +1,4 @@
-import ScratchBlocks from 'scratch-blocks';
+import ScratchBlocks from 'scalez-blocks';
 import {defaultColors} from './themes';
 
 const categorySeparator = '<sep gap="36"/>';
@@ -439,7 +439,89 @@ const control = function (isInitialSetup, isStage, targetId, colors) {
     `;
 };
 
-const sensing = function (isInitialSetup, isStage, targetId, colors) {
+// const sensing = function (isInitialSetup, isStage, targetId, colors) {
+//     const name = ScratchBlocks.ScratchMsgs.translate('SENSING_ASK_TEXT', 'What\'s your name?');
+//     // Note: the category's secondaryColour matches up with the blocks' tertiary color, both used for border color.
+//     return `
+//     <category
+//         name="%{BKY_CATEGORY_SENSING}"
+//         id="sensing"
+//         colour="${colors.primary}"
+//         secondaryColour="${colors.tertiary}">
+//         ${isStage ? '' : `
+//             <block type="sensing_touchingobject">
+//                 <value name="TOUCHINGOBJECTMENU">
+//                     <shadow type="sensing_touchingobjectmenu"/>
+//                 </value>
+//             </block>
+//             <block type="sensing_touchingcolor">
+//                 <value name="COLOR">
+//                     <shadow type="colour_picker"/>
+//                 </value>
+//             </block>
+//             <block type="sensing_coloristouchingcolor">
+//                 <value name="COLOR">
+//                     <shadow type="colour_picker"/>
+//                 </value>
+//                 <value name="COLOR2">
+//                     <shadow type="colour_picker"/>
+//                 </value>
+//             </block>
+//             <block type="sensing_distanceto">
+//                 <value name="DISTANCETOMENU">
+//                     <shadow type="sensing_distancetomenu"/>
+//                 </value>
+//             </block>
+//             ${blockSeparator}
+//         `}
+//         ${isInitialSetup ? '' : `
+//             <block id="askandwait" type="sensing_askandwait">
+//                 <value name="QUESTION">
+//                     <shadow type="text">
+//                         <field name="TEXT">${name}</field>
+//                     </shadow>
+//                 </value>
+//             </block>
+//         `}
+//         <block id="answer" type="sensing_answer"/>
+//         ${blockSeparator}
+//         <block type="sensing_keypressed">
+//             <value name="KEY_OPTION">
+//                 <shadow type="sensing_keyoptions"/>
+//             </value>
+//         </block>
+//         <block type="sensing_mousedown"/>
+//         <block type="sensing_mousex"/>
+//         <block type="sensing_mousey"/>
+//         ${isStage ? '' : `
+//             ${blockSeparator}
+//             '<block type="sensing_setdragmode" id="sensing_setdragmode"></block>'+
+//             ${blockSeparator}
+//         `}
+//         ${blockSeparator}
+//         <block id="loudness" type="sensing_loudness"/>
+//         ${blockSeparator}
+//         <block id="timer" type="sensing_timer"/>
+//         <block type="sensing_resettimer"/>
+//         ${blockSeparator}
+//         <block id="of" type="sensing_of">
+//             <value name="OBJECT">
+//                 <shadow id="sensing_of_object_menu" type="sensing_of_object_menu"/>
+//             </value>
+//         </block>
+//         ${blockSeparator}
+//         <block id="current" type="sensing_current"/>
+//         <block type="sensing_dayssince2000"/>
+//         ${blockSeparator}
+//         <block type="sensing_username"/>
+//         ${categorySeparator}
+//     </category>
+//     `;
+// };
+
+
+
+const web3Sensing = function (isInitialSetup, isStage, targetId, colors) {
     const name = ScratchBlocks.ScratchMsgs.translate('SENSING_ASK_TEXT', 'What\'s your name?');
     // Note: the category's secondaryColour matches up with the blocks' tertiary color, both used for border color.
     return `
@@ -448,32 +530,6 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
         id="sensing"
         colour="${colors.primary}"
         secondaryColour="${colors.tertiary}">
-        ${isStage ? '' : `
-            <block type="sensing_touchingobject">
-                <value name="TOUCHINGOBJECTMENU">
-                    <shadow type="sensing_touchingobjectmenu"/>
-                </value>
-            </block>
-            <block type="sensing_touchingcolor">
-                <value name="COLOR">
-                    <shadow type="colour_picker"/>
-                </value>
-            </block>
-            <block type="sensing_coloristouchingcolor">
-                <value name="COLOR">
-                    <shadow type="colour_picker"/>
-                </value>
-                <value name="COLOR2">
-                    <shadow type="colour_picker"/>
-                </value>
-            </block>
-            <block type="sensing_distanceto">
-                <value name="DISTANCETOMENU">
-                    <shadow type="sensing_distancetomenu"/>
-                </value>
-            </block>
-            ${blockSeparator}
-        `}
         ${isInitialSetup ? '' : `
             <block id="askandwait" type="sensing_askandwait">
                 <value name="QUESTION">
@@ -484,22 +540,6 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
             </block>
         `}
         <block id="answer" type="sensing_answer"/>
-        ${blockSeparator}
-        <block type="sensing_keypressed">
-            <value name="KEY_OPTION">
-                <shadow type="sensing_keyoptions"/>
-            </value>
-        </block>
-        <block type="sensing_mousedown"/>
-        <block type="sensing_mousex"/>
-        <block type="sensing_mousey"/>
-        ${isStage ? '' : `
-            ${blockSeparator}
-            '<block type="sensing_setdragmode" id="sensing_setdragmode"></block>'+
-            ${blockSeparator}
-        `}
-        ${blockSeparator}
-        <block id="loudness" type="sensing_loudness"/>
         ${blockSeparator}
         <block id="timer" type="sensing_timer"/>
         <block type="sensing_resettimer"/>
@@ -512,12 +552,11 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
         ${blockSeparator}
         <block id="current" type="sensing_current"/>
         <block type="sensing_dayssince2000"/>
-        ${blockSeparator}
-        <block type="sensing_username"/>
         ${categorySeparator}
     </category>
     `;
 };
+
 
 const operators = function (isInitialSetup, isStage, targetId, colors) {
     const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
@@ -782,7 +821,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const soundXML = moveCategory('sound') || sound(isInitialSetup, isStage, targetId, soundName, colors.sounds);
     const eventsXML = moveCategory('event') || events(isInitialSetup, isStage, targetId, colors.event);
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId, colors.control);
-    const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId, colors.sensing);
+    const sensingXML = moveCategory('sensing') || web3Sensing(isInitialSetup, isStage, targetId, colors.sensing);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId, colors.operators);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId, colors.data);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId, colors.more);
@@ -794,7 +833,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         soundXML, gap,
         eventsXML, gap,
         controlXML, gap,
-        // sensingXML, gap,
+        sensingXML, gap,
         operatorsXML, gap,
         // variablesXML, gap,
         // myBlocksXML

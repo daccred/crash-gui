@@ -15,9 +15,9 @@ const messages = defineMessages({
         description: 'Scale 3.0 telemetry modal label - for accessibility'
     },
     bodyText1: {
-        defaultMessage: 'The Scratch Team is always looking to better understand how Scratch is used around the ' +
-            'world. To help support this effort, you can allow Scratch to automatically send usage information to ' +
-            'the Scratch Team.',
+        defaultMessage: 'The Scale Z Team is always looking to better understand how Scale Z is used around the ' +
+            'world. To help support this effort, you can allow Scale Z to automatically send usage information to ' +
+            'the Scale Z Team.',
         description: 'First paragraph of body text for telemetry opt-in modal',
         id: 'gui.telemetryOptIn.body1'
     },
@@ -30,11 +30,11 @@ const messages = defineMessages({
     },
     privacyPolicyLink: {
         defaultMessage: 'Privacy Policy',
-        description: 'Link to the Scratch privacy policy',
+        description: 'Link to the Scale Z privacy policy',
         id: 'gui.telemetryOptIn.privacyPolicyLink'
     },
     optInText: {
-        defaultMessage: 'Share my usage data with the Scratch Team',
+        defaultMessage: 'Share my usage data with the Scale Z Team',
         description: 'Text for telemetry modal opt-in button',
         id: 'gui.telemetryOptIn.optInText'
     },
@@ -44,7 +44,7 @@ const messages = defineMessages({
         id: 'gui.telemetryOptIn.optInTooltip'
     },
     optOutText: {
-        defaultMessage: 'Do not share my usage data with the Scratch Team',
+        defaultMessage: 'Do not share my usage data with the Scale Z Team',
         description: 'Text for telemetry modal opt-in button',
         id: 'gui.telemetryOptIn.optOutText'
     },
