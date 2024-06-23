@@ -1,5 +1,5 @@
 html {
-    filter: invert(99%) hue-rotate(355deg) saturate(85%);
+    filter: invert(0%) hue-rotate(355deg) saturate(85%);
     /* filter: invert(0) hue-rotate(13deg) saturate(75%); */
 }
 
