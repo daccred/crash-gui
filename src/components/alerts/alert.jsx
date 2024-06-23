@@ -53,7 +53,7 @@ const AlertComponent = ({
         <div className={styles.alertMessage}>
             {extensionName ? (
                 <FormattedMessage
-                    defaultMessage="Scale Z lost connection to {extensionName}."
+                    defaultMessage="Crash Stark lost connection to {extensionName}."
                     description="Message indicating that an extension peripheral has been disconnected"
                     id="gui.alerts.lostPeripheralConnection"
                     values={{

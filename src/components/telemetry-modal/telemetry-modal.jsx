@@ -15,9 +15,9 @@ const messages = defineMessages({
         description: 'Scale 3.0 telemetry modal label - for accessibility'
     },
     bodyText1: {
-        defaultMessage: 'The Scale Z Team is always looking to better understand how Scale Z is used around the ' +
-            'world. To help support this effort, you can allow Scale Z to automatically send usage information to ' +
-            'the Scale Z Team.',
+        defaultMessage: 'The Crash Stark Team is always looking to better understand how Crash Stark is used around the ' +
+            'world. To help support this effort, you can allow Crash Stark to automatically send usage information to ' +
+            'the Crash Stark Team.',
         description: 'First paragraph of body text for telemetry opt-in modal',
         id: 'gui.telemetryOptIn.body1'
     },
@@ -30,11 +30,11 @@ const messages = defineMessages({
     },
     privacyPolicyLink: {
         defaultMessage: 'Privacy Policy',
-        description: 'Link to the Scale Z privacy policy',
+        description: 'Link to the Crash Stark privacy policy',
         id: 'gui.telemetryOptIn.privacyPolicyLink'
     },
     optInText: {
-        defaultMessage: 'Share my usage data with the Scale Z Team',
+        defaultMessage: 'Share my usage data with the Crash Stark Team',
         description: 'Text for telemetry modal opt-in button',
         id: 'gui.telemetryOptIn.optInText'
     },
@@ -44,7 +44,7 @@ const messages = defineMessages({
         id: 'gui.telemetryOptIn.optInTooltip'
     },
     optOutText: {
-        defaultMessage: 'Do not share my usage data with the Scale Z Team',
+        defaultMessage: 'Do not share my usage data with the Crash Stark Team',
         description: 'Text for telemetry modal opt-in button',
         id: 'gui.telemetryOptIn.optOutText'
     },

@@ -32,7 +32,7 @@ const WebGlModal = ({intl, ...props}) => (
                 <p>
                     { /* eslint-disable max-len */ }
                     <FormattedMessage
-                        defaultMessage="Unfortunately it looks like your browser or computer {webGlLink}. This technology is needed for Scale Z 3.0 to run."
+                        defaultMessage="Unfortunately it looks like your browser or computer {webGlLink}. This technology is needed for Crash Stark 3.0 to run."
                         description="WebGL missing message"
                         id="gui.webglModal.description"
                         values={{
@@ -69,7 +69,7 @@ const WebGlModal = ({intl, ...props}) => (
                 <div className={styles.faqLinkText}>
                     <FormattedMessage
                         defaultMessage="To learn more, go to the {previewFaqLink}."
-                        description="Scale Z 3.0 FAQ description"
+                        description="Crash Stark 3.0 FAQ description"
                         id="gui.webglModal.previewfaq"
                         values={{
                             previewFaqLink: (
@@ -79,7 +79,7 @@ const WebGlModal = ({intl, ...props}) => (
                                 >
                                     <FormattedMessage
                                         defaultMessage="FAQ"
-                                        description="link to Scale Z 3.0 FAQ page"
+                                        description="link to Crash Stark 3.0 FAQ page"
                                         id="gui.webglModal.previewfaqlinktext"
                                     />
                                 </a>

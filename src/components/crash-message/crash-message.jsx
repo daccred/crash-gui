@@ -22,7 +22,7 @@ const CrashMessage = props => (
             </h2>
             <p>
                 <FormattedMessage
-                    defaultMessage={'We are so sorry, but it looks like Scale Z has crashed. This bug has been' +
+                    defaultMessage={'We are so sorry, but it looks like Crash Stark has crashed. This bug has been' +
                         ' automatically reported to the Scratch Team. Please refresh your page to try' +
                         ' again.'}
                     description="Message to inform the user that page has crashed."

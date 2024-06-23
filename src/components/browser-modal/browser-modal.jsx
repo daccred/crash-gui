@@ -81,7 +81,7 @@ const BrowserModal = ({intl, ...props}) => {
                                     >
                                         <FormattedMessage
                                             defaultMessage="FAQ"
-                                            description="link to Scale Z 3.0 FAQ page"
+                                            description="link to Crash Stark 3.0 FAQ page"
                                             id="gui.unsupportedBrowser.previewfaqlinktext"
                                         />
                                     </a>
